@@ -1,24 +1,41 @@
 /* global styles  */
 * {
-  border: 2em;
-  border-color: rgb(116, 0, 225);
+border: red dotted 2px;
+box-sizing: border-box;
 }
+:root {
+    --base-color: rgb(250, 192, 148);
+    --base-dark: rgb(205, 145, 99);
+    --accent-color: pink;
+    --font-light: rgb(238, 225, 225);
+    --font-dark: rgb(88, 67, 67);
+    --main-font: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: 1em;
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    color: var(--font-dark)
 }
 body {
+    background: var(--base-color);
 }
 /* header / title / photo */
 header {
+    background: var(--accent-color);
+}
+ul {
+    list-style: none
 }
 .nav-bar .links-all {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px 25px 25px 600px
+
 }
 h1 {
   font-size: 500%;
@@ -26,6 +43,12 @@ h1 {
 
 /* portfolio links */
 main {
+
 }
 footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--base-dark);
+    color: var(--font-dark);
 }
