@@ -1,8 +1,8 @@
 /* global styles  */
-/* * {
+* {
   border: red dotted 2px;
   box-sizing: border-box;
-} */
+}
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@
   --accent-color: pink;
   --font-light: rgb(238, 225, 225);
   --font-dark: rgb(88, 67, 67);
-  --main-font: Bricolage-Grotesque, Verdana, Geneva, Tahoma, sans-serif;
+  --main-font: 'Bricolage Grotesque', sans-serif;
 }
 
 body {
@@ -95,10 +95,11 @@ nav ul li {
 }
 .nav-bar {
   font-weight: 600;
-  padding-top: 50px;
+  padding-top: 40px;
   display: flex;
   justify-content: flex-end;
 }
+
 
 li:hover {
   box-shadow: inset 0px 0px 8px var(--font-light), 0 0 15px var(--font-dark);
@@ -109,18 +110,30 @@ li:hover {
   width: 25%;
   margin-top: -25px;
 }
-
+.name-area {
+   
+}
 .name {
   display: flex;
   width: 800px;
   flex: 0 2 -19px;
+  flex-direction: row;
   background-color: var(--base-dark);
   text-align: end;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 /* main content */
 /* portfolio links */
-main ul li {
+.aside-main-column {
+    display: inline
+}
+.portfolio-links {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+
+
 }
 .portfolio-links {
   height: ;
