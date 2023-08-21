@@ -1,9 +1,7 @@
 /* global styles  */
 * {
-  border: red dotted 2px;
-  box-sizing: border-box;
+  border: red solid 0.5px;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -20,8 +18,8 @@
 
 body {
   display: flex;
+  /* add flex */
   flex-direction: column;
-  background: var(--base-color);
   font-family: var(--main-font);
   color: var(--font-dark);
   justify-content: flex-start;
@@ -29,19 +27,19 @@ body {
     rgba(157, 197, 252, 0.3) 0%,
     rgba(232, 102, 236, 0.6) 100%
   );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
-/* typography */
-html {
-  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+/* /typography */
+* {
   font-size: 62.5%;
 }
+/* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   margin-bottom: 0.625rem;
   color: var(--font-dark);
   font-weight: 700;
@@ -49,56 +47,33 @@ h6 {
 }
 h1 {
   /* 4rem = 40px (4 * 10px) */
-  font-size: 8rem;
+  font-size: 4rem;
 }
 
 h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 3rem;
-}
-
-h4 {
   font-size: 2.5rem;
 }
 
-h5 {
+h3 {
   font-size: 2rem;
-}
-
-h6 {
-  font-size: 1.5rem;
 }
 
 /* header / title / photo styles*/
 header {
   background: var(--accent-color);
+  display:flex;
+  justify-content: flex-end;
 }
-.name {
-  flex: 1 1 75%;
-  justify-content: right;
-  text-align: end;
-  padding-left: 80px;
+.links-all {
+  display: flex;
+  flex-direction: row;
 }
-nav ul {
-  display: contents;
-  flex: 0 2 390px;
-}
-nav ul li {
-  font-size: 1.5em;
+.links-all li {
+  font-size: 2rem;
   list-style: none;
-  display: inline-block;
   padding: 10px 20px;
   color: var(--font-dark);
   transition: ease-in-out 0.25s;
-}
-.nav-bar {
-  font-weight: 600;
-  padding-top: 40px;
-  display: flex;
-  justify-content: flex-end;
 }
 
 li:hover {
@@ -110,38 +85,45 @@ li:hover {
   width: 25%;
   margin-top: -25px;
 }
-
-.name {
+.name-and-photo {
   display: flex;
-  width: 800px;
-  flex: 0 2 -19px;
-  flex-direction: row;
+  justify-content: space-between;
+}
+.name {
+  font-size: 8rem;
+  width: 600px;
   background-color: var(--base-dark);
-  text-align: end;
-  justify-content: flex-end;
+  text-align: center;
+  height: 100px;
 }
 /* main content */
 /* portfolio links */
-.aside-main-column {
+.projects {
   display: flex;
-  padding: 1em;
-  flex-wrap: wrap;
+  justify-content:space-between;
 }
-.portfolio-links {
-  padding: 1em;
-  position: relative;
-  flex: 1 0 100%;
-  max-width: min-content;
-  margin: 1em;
-  justify-content: center;
+.projects h2 {
+  flex: 0 0 22%;
+  min-height: 500px;
+  text-align: right;
 }
-.portfolio-links {
-  height: ;
+.projects div {
+  flex: 0 0 75%;
+  min-height: 500px;
 }
+.project-1 {
+background-image:url("../images/IMG_3031.JPG");
+min-height: 300px;
+}
+
+
 footer {
   display: flex;
   justify-content: center;
   padding: 5px;
   background-color: var(--base-dark);
   color: var(--font-dark);
+}
+@media {
+  xxxx
 }
