@@ -1,54 +1,134 @@
 /* global styles  */
+/* * {
+  border: red dotted 2px;
+  box-sizing: border-box;
+} */
+
 * {
-border: red dotted 2px;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
-    --base-color: rgb(250, 192, 148);
-    --base-dark: rgb(205, 145, 99);
-    --accent-color: pink;
-    --font-light: rgb(238, 225, 225);
-    --font-dark: rgb(88, 67, 67);
-    --main-font: Verdana, Geneva, Tahoma, sans-serif;
-    
+  --base-color: rgb(250, 192, 148);
+  --base-dark: rgba(252, 195, 145);
+  --accent-color: pink;
+  --font-light: rgb(238, 225, 225);
+  --font-dark: rgb(88, 67, 67);
+  --main-font: Bricolage-Grotesque, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: var(--main-font);
-    color: var(--font-dark)
-}
 body {
-    background: var(--base-color);
-}
-/* header / title / photo */
-header {
-    background: var(--accent-color);
-}
-ul {
-    list-style: none
-}
-.nav-bar .links-all {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 25px 25px 25px 600px
+  flex-direction: column;
+  background: var(--base-color);
+  font-family: var(--main-font);
+  color: var(--font-dark);
+  justify-content: flex-start;
+  background: linear-gradient(
+    rgba(157, 197, 252, 0.3) 0%,
+    rgba(232, 102, 236, 0.6) 100%
+  );
+}
+/* typography */
+html {
+  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+  font-size: 62.5%;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  color: var(--font-dark);
+  font-weight: 700;
+  line-height: 1.1;
 }
 h1 {
-  font-size: 500%;
+  /* 4rem = 40px (4 * 10px) */
+  font-size: 8rem;
 }
 
-/* portfolio links */
-main {
+h2 {
+  font-size: 3.5rem;
+}
 
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+/* header / title / photo styles*/
+header {
+  background: var(--accent-color);
+}
+.name {
+  flex: 1 1 75%;
+  justify-content: right;
+  text-align: end;
+  padding-left: 80px;
+}
+nav ul {
+  display: contents;
+  flex: 0 2 390px;
+}
+nav ul li {
+  font-size: 1.5em;
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--font-dark);
+}
+.nav-bar {
+  font-weight: 600;
+  padding-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li:hover {
+  box-shadow: inset 0px 0px 8px var(--font-light), 0 0 15px var(--font-dark);
+}
+/* under header */
+.pic {
+  display: block;
+  width: 25%;
+  margin-top: -25px;
+}
+
+.name {
+  display: flex;
+  width: 800px;
+  flex: 0 2 -19px;
+  background-color: var(--base-dark);
+  text-align: end;
+  justify-content: flex-start;
+}
+/* main content */
+/* portfolio links */
+main ul li {
+}
+.portfolio-links {
+  height: ;
 }
 footer {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    background-color: var(--base-dark);
-    color: var(--font-dark);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: var(--base-dark);
+  color: var(--font-dark);
 }
