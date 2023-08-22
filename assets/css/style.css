@@ -15,13 +15,10 @@
   --font-dark: rgb(88, 67, 67);
   --main-font: "Bricolage Grotesque", sans-serif;
 }
-
+/* sets font colors and styles, sets body background to gradient */
 body {
-  display: flex;
-  flex-direction: column;
   font-family: var(--main-font);
   color: var(--font-dark);
-  justify-content: flex-start;
   background: linear-gradient(
     rgba(157, 197, 252, 0.3) 0%,
     rgba(232, 102, 236, 0.6) 100%
@@ -35,7 +32,7 @@ body {
   font-size: 62.5%;
 }
 /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-
+/* copied this from an assignment because it seems reasonable */
 h1,
 h2,
 h3 {
@@ -46,6 +43,7 @@ h3 {
 }
 h1 {
   /* 4rem = 40px (4 * 10px) */
+  /* calculation for font */
   font-size: 4rem;
 }
 
@@ -57,7 +55,7 @@ h3 {
   font-size: 2rem;
 }
 
-/* header / title / photo styles*/
+/* header and nav bar styles*/
 header {
   background: var(--accent-color);
   display: flex;
@@ -69,7 +67,7 @@ header {
 }
 .links-all li {
   font-size: 3vw;
-  text-decoration:none;
+  text-decoration: none;
   list-style: none;
   padding: 10px 20px;
   color: var(--font-dark);
@@ -81,7 +79,7 @@ li:hover {
 }
 a {
   text-decoration: none;
-  color:var(--font-dark)
+  color: var(--font-dark);
 }
 /* under header */
 .pic {
@@ -94,7 +92,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom:3vw;
+  margin-bottom: 3vw;
 }
 .name {
   font-size: 8vw;
@@ -107,46 +105,35 @@ a {
 .blurb {
   position: relative;
   padding-left: 69%;
-  margin-top: -75px;
+  margin-top: -15px;
   font-size: 2vw;
-  flex: 2 2 100%;
+  /* flex: 2 2 100%; */
 }
 /* main content */
 /* portfolio links */
-.main {
-  display: flex;
-  flex-wrap: wrap;
-}
+
+/* mobile first approach */
 .projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-right: var(--font-dark) 5px solid
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ justify-content: center;
+
 }
 .projects h2 {
-  flex: 0 0 22%;
-  min-height: fit-content;
-  text-align: right;
-  border-right: var(--font-dark) 2px solid;
-  padding-right: 10px;
+  border-bottom: var(--font-dark) 2px solid;
+ height: 30px;
+ width: 500px;
 }
 .projects div a {
-  display: flex;
-  flex: 0 0 75%;
-  justify-content: left;
-  /* min-height: 10vw; */
-  flex-wrap: wrap;
+  flex: 0 0 75%; 
 }
 .projects div {
-  max-height: 60%;
-  
-}
-.project-1-link {
-  display: flex;
-  /* min-width: 30vw; */
+  padding-top:15px;
 }
 
 #project-1-link h3 {
+ 
   color: var(--font-light);
   text-decoration: none;
   display: flex;
@@ -192,7 +179,6 @@ a {
 .contact {
   display: flex;
   justify-content: space-between;
-  
 }
 .contact h2 {
   flex: 0 0 22%;
@@ -203,24 +189,22 @@ a {
 }
 .contact div {
   flex: 0 0 75%;
-  /* min-height: 500px; */
 }
 .contact-buttons {
   display: flex;
   flex-direction: row;
-  
+
   font-size: 9vw;
   list-style: none;
   color: var(--font-dark);
   margin-right: 70vw;
-  
 }
 .contact-buttons li {
   padding: 0 30px 0 30px;
   text-decoration: none !important;
   justify-content: center;
   align-items: center;
-  border-radius:10%;
+  border-radius: 10%;
 }
 
 li {
@@ -233,6 +217,30 @@ footer {
   background-color: var(--base-dark);
   color: var(--font-dark);
 }
-/* @media {
-  #
-} */
+@media only screen and (min-width: 1000px) {
+  .projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    
+  }
+  .projects h2 {
+    flex: 0 0 25%;
+    padding-right: 10px;
+    border-bottom: 0px;
+    border-right: var(--font-dark) solid 2px;
+    height: 500px;
+    text-align:right
+    
+  }
+  .projects div a {
+      flex: 0 0 75%;   
+}
+.blurb {
+  position: relative;
+  padding-left: 69%;
+  margin-top: -75px;
+  font-size: 2vw;
+  flex: 2 2 100%;
+}
