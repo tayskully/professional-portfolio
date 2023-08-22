@@ -67,7 +67,6 @@ header {
 }
 .links-all li {
   font-size: 3vw;
-  text-decoration: none;
   list-style: none;
   padding: 10px 20px;
   color: var(--font-dark);
@@ -80,13 +79,16 @@ li:hover {
 a {
   text-decoration: none;
   color: var(--font-dark);
+  text-align: center;
 }
-/* under header */
+
+/* under header, name + pic + blurb */
 .pic {
   display: block;
   width: 25%;
   margin-top: -25px;
   margin-left: 80px;
+  border-radius: 10%;
 }
 .name-and-photo {
   display: flex;
@@ -107,33 +109,30 @@ a {
   padding-left: 69%;
   margin-top: -15px;
   font-size: 2vw;
-  /* flex: 2 2 100%; */
 }
+
 /* main content */
 /* portfolio links */
-
 /* mobile first approach */
 .projects {
- display:flex;
- flex-direction:row;
- flex-wrap:wrap;
- justify-content: center;
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .projects h2 {
   border-bottom: var(--font-dark) 2px solid;
- height: 30px;
- width: 500px;
+  height: 30px;
+  width: 500px;
 }
 .projects div a {
-  flex: 0 0 75%; 
+  flex: 0 0 75%;
 }
 .projects div {
-  padding-top:15px;
+  padding-top: 15px;
 }
-
+/* bigger project */
 #project-1-link h3 {
- 
   color: var(--font-light);
   text-decoration: none;
   display: flex;
@@ -147,6 +146,7 @@ a {
   align-items: center;
   border-radius: 10%;
 }
+/* smaller projects */
 #project-2-link h3,
 #project-3-link h3,
 #project-4-link h3 {
@@ -155,7 +155,6 @@ a {
   display: flex;
   flex-wrap: nowrap;
   background-image: url("../images/mitten.jpg");
-  /* min-height: 100px; */
   padding: 50px;
   background-repeat: no-repeat;
   justify-content: center;
@@ -172,16 +171,20 @@ a {
   background-image: url("../images/world.jpg");
   color: var(--font-dark);
 }
-.button {
-  text-decoration: none;
+/* lil pseudo elements */
+.projects div h3:hover {
+  box-shadow: inset 0px 0px 8px var(--accent-color),
+    0 0 15px var(--accent-color);
 }
+
+/* contact buttons */
 
 .contact {
   display: flex;
   justify-content: space-between;
 }
 .contact h2 {
-  flex: 0 0 22%;
+  flex: 0 0 25%;
   min-height: 500px;
   text-align: right;
   border-right: var(--font-dark) 2px solid;
@@ -201,19 +204,16 @@ a {
 }
 .contact-buttons li {
   padding: 0 30px 0 30px;
-  text-decoration: none !important;
   justify-content: center;
   align-items: center;
   border-radius: 10%;
 }
 
-li {
-}
-
 footer {
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 3.5px;
+  font-size: 5em;
   background-color: var(--base-dark);
   color: var(--font-dark);
 }
@@ -223,7 +223,6 @@ footer {
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: flex-start;
-    
   }
   .projects h2 {
     flex: 0 0 25%;
@@ -231,16 +230,16 @@ footer {
     border-bottom: 0px;
     border-right: var(--font-dark) solid 2px;
     height: 500px;
-    text-align:right
-    
+    text-align: right;
   }
   .projects div a {
-      flex: 0 0 75%;   
-}
-.blurb {
-  position: relative;
-  padding-left: 69%;
-  margin-top: -75px;
-  font-size: 2vw;
-  flex: 2 2 100%;
+    flex: 0 0 75%;
+  }
+  .blurb {
+    position: relative;
+    padding-left: 69%;
+    margin-top: -75px;
+    font-size: 2vw;
+    flex: 2 2 100%;
+  }
 }
