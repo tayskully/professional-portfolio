@@ -8,11 +8,10 @@
   box-sizing: border-box;
 }
 :root {
-  --base-color: rgb(250, 192, 148);
-  --base-dark: rgba(252, 195, 145);
-  --accent-color: pink;
+  --base-dark: rgb(187, 212, 219);
+  --accent-color: rgb(192, 212, 255);
   --font-light: rgb(238, 225, 225);
-  --font-dark: rgb(88, 67, 67);
+  --font-dark: rgb(41, 31, 31);
   --main-font: "Bricolage Grotesque", sans-serif;
 }
 /* sets font colors and styles, sets body background to gradient */
@@ -21,7 +20,7 @@ body {
   font-family: var(--main-font);
   color: var(--font-dark);
   background: linear-gradient(
-    rgba(157, 197, 252, 0.3) 0%,
+    rgba(153, 191, 252, 0.59) 0%,
     rgba(232, 102, 236, 0.6) 100%
   );
 }
@@ -93,6 +92,7 @@ a {
   width: 30%;
   /* margin-top: 25px; */
   margin-left: 3px;
+  margin-right: 3px;
   border-radius: 10%;
 }
 .name-and-photo {
@@ -113,6 +113,7 @@ a {
 .blurb {
   position: relative;
   margin-top: -13%;
+  margin-right: 10px;
   font-size: 1.8rem;
   text-align: right;
 }
@@ -151,13 +152,12 @@ a {
   padding: 0 0 3px 0;
 }
 /* bigger project */
-
 #project-1-link h3 {
   color: var(--font-light);
   text-decoration: none;
   display: flex;
   flex: 0 0 100%;
-  background-image: url("../images/sunset.jpg");
+  background-image: url("../images/fish.png");
   padding: 15vw;
   background-repeat: no-repeat;
   background-size: cover;
@@ -193,14 +193,14 @@ a {
   width: 180px;
 }
 #project-4-link h3 {
-  background-image: url("../images/key.png");
+  background-image: url("../images/key1.png");
   color: var(--font-dark);
   height: 180px;
   width: 180px;
 }
 #project-5-link h3 {
-  background-image: url("../images/key.png");
-  color: var(--font-dark);
+  background-image: url("../images/dice1.png");
+  color: var(--font-light);
   height: 180px;
   width: 180px;
 }
@@ -216,17 +216,17 @@ a {
 .contact {
   display: flex;
   flex-direction: column;
+  padding: 0 5px 0px 5px;
 }
 .contact h2 {
-  flex: 0 0 50%;
+  flex: 0 0 100%;
   min-height: 20px;
   text-align: left;
   border-bottom: var(--font-dark) 2px solid;
-  padding-right: 10px;
+  padding: 0 0 3px 0;
 }
 .contact div {
   display: flex;
-  flex: 0 0 75%;
   justify-content: space-evenly;
 }
 .contact-buttons {
@@ -243,15 +243,16 @@ a {
   border-radius: 10%;
   padding: 8px;
 }
-
+/* footer */
 footer {
   display: flex;
   justify-content: center;
   padding: 3.5px;
-  font-size: 5em;
+  font-size: 1rem;
   background-color: var(--base-dark);
   color: var(--font-dark);
 }
+
 @media only screen and (min-width: 1000px) {
   .projects {
     display: flex;
