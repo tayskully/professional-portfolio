@@ -67,6 +67,7 @@ main {
 .links-all {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 .links-all li {
   font-size: 2.5rem;
@@ -102,7 +103,9 @@ a {
   margin-bottom: 3vw;
 }
 .name {
-  font-size: 3.8rem;
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 10vw;
   width: 60%;
   height: 10%;
   margin-right: 3px;
@@ -119,24 +122,24 @@ a {
 }
 .name-and-photo {
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 /* main content */
 
+.about-me h2 {
+  flex: 0 0 100%;
+  min-height: 20px;
+  text-align: left;
+  border-bottom: var(--font-dark) 2px solid;
+}
 .about-me {
   font-size: 2rem;
   min-height: 30px;
   padding: 0 5px 10px 5px;
   text-align: center;
 }
-.about-me h2 {
-  flex: 0 0 100%;
-  min-height: 20px;
-  text-align: left;
-  border-bottom: var(--font-dark) 2px solid;
- 
-}
+
 /* portfolio links */
 .projects {
   font-size: 1.9rem;
@@ -166,7 +169,7 @@ a {
 }
 /* smaller projects */
 .smaller-projects {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
@@ -252,8 +255,78 @@ footer {
   background-color: var(--base-dark);
   color: var(--font-dark);
 }
+/* media queries */
+
+@media only screen and (min-width: 600px) {
+  .name-and-photo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .name {
+    flex: 0 0 60%;
+    font-size: 9vw;
+    text-align: right;
+  }
+  .pic {
+    flex: 0 0 30%;
+    margin-left: -140px;
+  }
+  .blurb {
+    display: flex;
+    justify-content: baseline;
+    margin-top: -75px;
+    font-size: 3vw;
+  }
+  .about-me {
+    font-size: 4vw;
+  }
+}
+
+/* desktop  */
 
 @media only screen and (min-width: 1000px) {
+  .name {
+    font-size: 9rem;
+    text-align: right;
+  }
+  .name-and-photo{
+    text-align: right;
+  }
+  .blurb {
+    position: relative;
+    padding-left: 69%;
+    margin-top: -175px;
+    font-size: 2vw;
+    flex: 2 2 100%;
+  }
+  .about-me {
+    display: flex;
+    flex-direction: row;
+  }
+  .about-me h2 {
+    flex: 0 0 15%;
+    padding-right: 10px;
+    border-bottom: 0px;
+    border-right: var(--font-dark) solid 2px;
+    height: 200px;
+    text-align: right;
+    font-size: 4rem;
+  }
+  .about-me p {
+    padding-left: 20px;
+    font-size: 3rem;
+  }
+ 
+  .projects h2 {
+    flex: 0 0 15%;
+    padding-right: 10px;
+    border-bottom: 0px;
+    border-right: var(--font-dark) solid 2px;
+    height: 500px;
+    text-align: right;
+    font-size: 4rem;
+  }
   .projects {
     display: flex;
     justify-content: space-between;
@@ -261,55 +334,29 @@ footer {
     align-items: flex-start;
   }
   .big-project {
-display: flex; 
-
+    padding-left: 10px;
+    display: flex;
   }
   .small-project {
     justify-content: center;
   }
-  .projects h2 {
-    flex: 0 0 25%;
-    padding-right: 10px;
-    border-bottom: 0px;
-    border-right: var(--font-dark) solid 2px;
-    height: 500px;
-    text-align: right;
+
+  .contact {
+    display:flex;
+    flex-direction: row;
   }
-  .about-me h2 {
-    flex: 0 0 25%;
+  .contact h2 {
+    font-size: 4rem;
+    flex: 0 0 15%;
     padding-right: 10px;
-    border-bottom: 0px;
     border-right: var(--font-dark) solid 2px;
     height: 100px;
+    border-bottom: 0px;
     text-align: right;
+    font-size: 4rem;
   }
-  
-  .projects div a {
-    flex: 0 0 75%;
+  .contact ul {
+    font-size: 10rem;
   }
-  .blurb {
-    position: relative;
-    padding-left: 69%;
-    margin-top: -75px;
-    font-size: 2vw;
-    flex: 2 2 100%;
-  }}
 
-
-  /* .projects { */
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center; */
-  /* } */
-  /* .projects h2 { */
-    /* border-bottom: var(--font-dark) 2px solid;
-    height: 30px;
-    width: 500px; */
-  /* } */
-  /* .projects div a { */
-    /* flex: 0 0 75%; */
-  /* } */
-  /* .projects div { */
-    /* padding-top: 15px; */
-  /* } */
+}
