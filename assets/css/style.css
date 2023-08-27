@@ -1,6 +1,6 @@
 /* global styles  */
 * {
-  border: red solid 0.3px;
+  /* border: red solid 0.3px; */
 }
 * {
   margin: 0;
@@ -296,7 +296,7 @@ footer {
   .blurb {
     position: relative;
     padding-left: 69%;
-    margin-top: -175px;
+    margin-top: -300px;
     font-size: 2vw;
     flex: 2 2 100%;
   }
