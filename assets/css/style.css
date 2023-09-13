@@ -160,12 +160,13 @@ a {
   text-decoration: none;
   display: flex;
   flex: 0 0 100%;
-  background-image: url("../images/fish.png");
+  background-image: url("../images/whichflix.png");
+  background-position:center;
+  background-size: contain;
+  background-color: black;
   padding: 15vw;
   background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
+
 }
 /* smaller projects */
 .smaller-projects {
@@ -175,35 +176,42 @@ a {
   justify-content: space-around;
 }
 .smaller-projects h3 {
-  height: 180px;
-  width: 180px;
+  height: auto;
+  width: auto;
   display: flex;
-  align-items: center;
+  align-items:baseline;
   justify-content: center;
   text-decoration: none;
-  background-repeat: no-repeat;
 }
 #project-2-link h3 {
   color: var(--font-dark);
-  background-image: url("../images/mitten.jpg");
+  background-image: url("../images/weather.png");
+  background-position:center;
+  background-size: contain;
   height: 180px;
   width: 180px;
 }
 #project-3-link h3 {
-  background-image: url("../images/dumbbell.jpg");
-  color: var(--font-light);
+  background-image: url("../images/quiz.png");
+  background-position:center;
+  background-size: contain;
+  color: var(--font-dark);
   height: 180px;
   width: 180px;
 }
 #project-4-link h3 {
-  background-image: url("../images/key1.png");
+  background-image: url("../images/password.png");
+  background-position:center;
+  background-size: contain;
   color: var(--font-dark);
   height: 180px;
   width: 180px;
 }
 #project-5-link h3 {
-  background-image: url("../images/dice1.png");
-  color: var(--font-light);
+  background-image: url("../images/workschedule.png");
+  background-position:center;
+  background-size: contain;
+  color: var(--font-dark);
   height: 180px;
   width: 180px;
 }
