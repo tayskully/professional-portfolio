@@ -1,7 +1,7 @@
 /* global styles  */
-* {
+/* * {
   border: red solid 0.3px;
-}
+} */
 * {
   margin: 0;
   padding: 0;
@@ -70,9 +70,9 @@ main {
   justify-content: space-evenly;
 }
 .links-all li {
-  font-size: 2.5rem;
+  font-size: 2.8em;
   list-style: none;
-  padding: 10px 20px;
+  padding: 10px 5px;
   color: var(--font-dark);
   transition: ease-in-out 0.25s;
 }
@@ -90,7 +90,7 @@ a {
 /* name + pic + blurb */
 .name-and-photo {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 3vw;
 }
@@ -115,7 +115,7 @@ a {
   display:flex;
   margin-top: 10px;
   margin-right: 10px;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 
@@ -271,18 +271,20 @@ footer {
   background-color: var(--base-dark);
   color: var(--font-dark);
 }
-/* media queries */
+/* media queries -------------------------------------*/
 
+/* medium screen */
 @media only screen and (min-width: 500px) {
   .name-and-photo {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
   .name {
     flex: 0 0 60%;
     font-size: 9vw;
-    text-align: right;
+    text-align: center;
   }
   .pic {
     flex: 0 0 30%;
@@ -303,17 +305,26 @@ footer {
 /* desktop  */
 
 @media only screen and (min-width: 1000px) {
+  .links-all li {
+    font-size: 5rem;
+    list-style: none;
+    padding: 10px 5px;
+    color: var(--font-dark);
+    transition: ease-in-out 0.25s;
+  }
   .name {
     font-size: 12rem;
+    flex: 0 1 70%;
     text-align: right;
   }
   .name-and-photo{
     text-align: right;
+    justify-content: flex-end;
   }
   .blurbs {
     display: flex;
     flex: 0 1 60%;
-    margin-top:-17%;
+    margin-top:-10%;
     padding-left: 2%;
     font-size: 4rem;
   }
