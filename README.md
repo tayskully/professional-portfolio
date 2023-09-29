@@ -1,8 +1,7 @@
-# Module 2 Challenge:
 
-# Professional Portfolio
+# My Portfolio
 
-This challenge was to create a professional portfolio page from scratch using HTML, and CSS only. The page was to have a responsive layout, and present our numerous well-developed projects.
+This portfolio was created to serve as a professional portfolio page using HTML, and CSS only. The portfolio presents a responsive layout, and present my numerous well-developed projects. 
 
 ## Installation
 
@@ -10,13 +9,14 @@ In order to get the full experience, users must view the portfolio at both a des
 
 ## Usage
 
-You may scroll up and down on this page, click the links to jump to the content you crave, expand the size of the browswer window, or simply open the link in a mobile device.
+You may scroll up and down on this page, click the links to jump to the content you crave, expand the size of the browser window, or simply open the link in a mobile device.
 
 Click this link here to see it!
 https://tayskully.github.io/professional-portfolio/
 
 It should look something like this:
-![screenshot](./assets/images/screenshot1.png)
+![screenshot](./assets/images/screenshot12.png)
+![screenshot](./assets/images/screenshot13.png)
 
 ## Credits
 
