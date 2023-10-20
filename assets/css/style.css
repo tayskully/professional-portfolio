@@ -163,6 +163,20 @@ a {
   background-repeat: no-repeat;
 
 }
+#project-x-link h3 {
+  color: var(--font-light);
+  text-decoration: none;
+  display: flex;
+  flex: 0 0 100%;
+  background-image: url("../images/shapeup.png");
+  filter: opacity(60%);
+  background-position:center;
+  background-size: contain;
+  background-color: black;
+  padding: 15vw;
+  background-repeat: no-repeat;
+
+}
 /* smaller projects */
 .smaller-projects {
   display: flex;
@@ -226,6 +240,7 @@ a {
 #project-4-link h3:hover, 
 #project-3-link h3:hover,
 #project-2-link h3:hover, 
+#project-x-link h3:hover,
 #project-1-link h3:hover {
   filter: opacity(90%);
 }
